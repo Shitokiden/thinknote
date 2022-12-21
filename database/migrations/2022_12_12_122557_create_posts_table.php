@@ -18,9 +18,8 @@ return new class extends Migration
             $table->string('name',50);
             $table->string('theme',50);
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('size_id')->constrained();
+            // $table->foreignId('size_id')->constrained();
             $table->timestamps();
-            //NULL値可能なcreated_atとupdated_atのカラムを追加
             $table->softDeletes();
         });
     }
