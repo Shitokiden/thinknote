@@ -16,9 +16,8 @@ return new class extends Migration
         Schema::create('sizes', function (Blueprint $table) {
             $table->id();
             $table->string('size',100);
-            //画像をＣＳＳで使えるように
             $table->timestamps();
-            $table->softDeletes;
+            $table->softDeletes();
         });
     }
 
